@@ -10,15 +10,8 @@ const homelist = (req, res) => {
            name: 'Travel',
            rating: 4,
            facilities: ['images'],
+           link:"/location"
            
-         },{
-           name: 'Food',
-           rating: 3,
-           facilities: ['text', 'images'],
-         },{
-           name: 'Fashion',
-           rating: 2,
-           facilities: [ 'Dress', 'Style'],
            
          }]
        });
@@ -27,6 +20,7 @@ const homelist = (req, res) => {
     const locationInfo = (req, res) => {
        res.render('location-info', { title: 'Location info' });
       };
+      
       /* GET 'Add review' page */
       const addReview = (req, res) => {
        res.render('location-review-form', { title: 'Add review' });
@@ -34,6 +28,7 @@ const homelist = (req, res) => {
       module.exports = {
        homelist,
        locationInfo,
-       addReview
+       addReview,
+    
       };
  
